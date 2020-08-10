@@ -1,10 +1,11 @@
 import React from 'react'
-import NavBar from './NavBar'
+import NavBar from './components/NavBar'
+import LogIn from './components/LogIn'
 
 export default function Unauthorized() {
     return (
         <>
-        <h5>Unauthorized</h5>
+        < LogIn />
         < NavBar />
         </>
       );
