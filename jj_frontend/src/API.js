@@ -15,10 +15,21 @@ const authorizedFetch = (url, options = {}) => {
   }
 
 const getPrintsCollection = () => {
-    fetch(URL + "prints")
-    .then(resp => resp.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
+  fetch(URL + "prints")
+  .then(resp => resp.json())
+  .then(data => console.log(data))
+  .catch(error => console.log(error));
 }
 
-export default { getPrintsCollection }
+const validateUser = async () => {
+  try {
+    const res = await fetch(URL + "admin", {
+        headers: {
+            Authorization: `Bearer ${getToken()}`,
+        }
+    });
+    return await res.json();
+  } catch (error) { console.log(error) }
+}
+
+export default { getPrintsCollection, validateUser }
