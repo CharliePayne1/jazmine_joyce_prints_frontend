@@ -9,13 +9,9 @@ export default function Unauthorized() {
         <>
           <h1>Jazmine Joyce Website</h1>
           <h5>Original, hand printed lino art.</h5>
+        <NavBar />
         <Switch>
-            <NavBar />
-
-            <Route path="*">
-              <About />
-            </Route>
-            
+          
         </Switch>
       </>
       );

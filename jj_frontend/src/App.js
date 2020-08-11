@@ -27,11 +27,13 @@ function App() {
   return (
     <Router>
       <Switch>
-          { username ? < Authorised /> : < Unauthorized /> }
-
-          <Route exact path="/admin">
-            < LogIn />  
-          </Route> 
+        <Route exact path="/admin">
+          <LogIn/>
+        </Route> 
+          { username 
+          ? < Authorised /> 
+          : < Unauthorized /> 
+          }
       </Switch>
     </Router>
   );

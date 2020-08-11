@@ -13,18 +13,16 @@ export default function NavBar() {
                 <Link to="/about"> About |</Link>
                 <Link to="/basket"> Basket </Link>
             <hr />
-
-            <>
-              <Route path="/prints">
+     
+              <Route exact path="/prints">
                 <PrintsContainer />
               </Route>
-              <Route path="/about">
+              <Route exact path="/about">
                 <About />
               </Route>
-              <Route path="/basket">
+              <Route exact path="/basket">
                 <Basket />
               </Route>
-            </>
           </div>
         </Router>
       </div>
