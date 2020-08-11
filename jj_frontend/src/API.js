@@ -32,6 +32,21 @@ const validateUser = async () => {
   } catch (error) { console.log(error) }
 }
 
-// testing 
+const logInUser = (userData) => {
+  return fetch(URL + `login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({ user: userData }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        localStorage.setItem("jwt", res.jwt);
+        return res;
+      })
+}
 
-export default { getPrintsCollection, validateUser }
+
+export default { getPrintsCollection, validateUser, logInUser }

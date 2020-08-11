@@ -1,5 +1,7 @@
 import React from 'react'
 
+import API from '../API'
+
 export default function LogIn() {
 
     const [username, setUsername] = React.useState("")
@@ -14,6 +16,7 @@ export default function LogIn() {
         e.preventDefault();
         const user = { username, password }
         console.log(user);
+        API.logInUser(user).then(resp => console.log(resp))
         clearForm()
     }
 

@@ -13,7 +13,6 @@ export default function NavBar() {
                 <Link to="/about"> About |</Link>
                 <Link to="/basket"> Basket </Link>
             <hr />
-     
               <Route exact path="/prints">
                 <PrintsContainer />
               </Route>
