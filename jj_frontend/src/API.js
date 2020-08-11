@@ -32,4 +32,6 @@ const validateUser = async () => {
   } catch (error) { console.log(error) }
 }
 
+// testing 
+
 export default { getPrintsCollection, validateUser }
